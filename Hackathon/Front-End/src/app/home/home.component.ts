@@ -55,11 +55,20 @@ export class HomeComponent implements OnInit {
     this.officeModalComponent.openModal(id);
   }
 
+  public trilha :any[];
 
   constructor(private officeService:OfficeService) { }
 
   ngOnInit() {
     this.restore();
+
+      this.officeService
+      .getAll()
+      .subscribe((trilha: Array<any>) => {
+        this.trilha = trilha;
+
+        console.log(this.trilha)
+    });
   }
 
   restore() {

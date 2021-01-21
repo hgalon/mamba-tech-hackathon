@@ -52,7 +52,7 @@ export class ProfileDetailComponent implements OnInit {
 
     //this.loadData(this.id);
 
-    this.cargoService.ler();
+    //this.cargoService.ler();
   }
 
   private loadData(id: number) {

@@ -3,13 +3,15 @@ import { Area } from '../model/area.model';
 import { Carreira } from '../model/carreira.model';
 import { Trilha } from '../model/trilha.model';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OfficeService {
 
-
+  private url = 'https://totvs-hackathon.azurewebsites.net/api/trilha'
 
   cargo:Cargo = { titulo : "Analise de desenvolvimento I", area : "Dev Team", nivel:1 }
   cargo2:Cargo = { titulo : "Analise de desenvolvimento II", area : "Dev Team", nivel:2 }
@@ -29,11 +31,11 @@ export class OfficeService {
   }
 ]
 
-  constructor() { 
+  constructor(private httpCli:HttpClient) { 
 
   }
 
-  ler(){
-    console.log(this.trilha);
+  getAll(): Observable<Array<any>> {
+    return this.httpCli.get(this.url) as Observable<Array<any>>;
   }
 }

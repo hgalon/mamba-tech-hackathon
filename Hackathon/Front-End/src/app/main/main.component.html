@@ -1,10 +1,12 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="Mapa de Carreiras" [p-profile]="profile" [p-profile-actions]="profileActions"></po-toolbar>
+  <po-toolbar p-title="Mapa de Carreiras" [p-profile]="profile" [p-profile-actions]="profileActions">
+    
+  </po-toolbar>
 
   <po-menu [p-menus]="menus">
-    <div *p-menu-header-template>
-      ...
-    </div>
+    <ng-template p-menu-header-template>
+        <img src="assets/img/totvs.png" style="padding: 20px !important;">
+    </ng-template>
   </po-menu>
 
   <router-outlet></router-outlet>
