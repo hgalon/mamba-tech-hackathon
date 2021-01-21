@@ -1,7 +1,11 @@
 <div class="po-wrapper">
   <po-toolbar p-title="Mapa de Carreiras" [p-profile]="profile" [p-profile-actions]="profileActions"></po-toolbar>
 
-  <po-menu [p-menus]="menus"></po-menu>
+  <po-menu [p-menus]="menus">
+    <div *p-menu-header-template>
+      ...
+    </div>
+  </po-menu>
 
   <router-outlet></router-outlet>
 </div>

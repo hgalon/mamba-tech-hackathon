@@ -1,0 +1,13 @@
+<!-- <po-modal #modal p-title="PO Modal"> We are TOTVERS!!! </po-modal>
+
+<po-button p-label="Open modal" (p-click)="modal.open()"> </po-button> -->
+
+<po-modal
+    [p-click-out]="properties.includes('click-out')"
+    [p-hide-close]="properties.includes('hide-close')"
+    [p-primary-action]="primaryAction"
+    [p-secondary-action]="secondaryActionLabel ? secondaryAction : null"
+    [p-size]="size"
+    [p-title]="title">
+    {{ content }}
+</po-modal>

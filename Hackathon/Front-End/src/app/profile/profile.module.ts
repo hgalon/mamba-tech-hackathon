@@ -1,4 +1,4 @@
-import { CargoService } from './../cargo/cargo.service';
+import { OfficeService } from '../office/office.service';
 import { ProfileService } from './profile.service';
 import { ProfileRoutingModule } from './profile-routing.module';
 import { NgModule } from '@angular/core';
@@ -27,6 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     PoInfoModule,
     ProfileRoutingModule
   ],
-  providers:[ProfileService, CargoService]
+  providers:[ProfileService, OfficeService]
 })
 export class ProfileModule { }

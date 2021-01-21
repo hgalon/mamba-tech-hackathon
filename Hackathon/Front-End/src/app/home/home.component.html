@@ -2,6 +2,9 @@
 
   <h2> Trilha Tech / Desenvolvimento </h2>
 
+
+  <app-office-modal></app-office-modal>
+  
   <table class="heavyTable">
     <thead>
       <tr>
@@ -15,7 +18,7 @@
     <tbody>
       <tr>
         <td>Analísta II</td>
-        <td><po-button p-label="Analísta desenv II" p-small="true"> Analísta desenv II</po-button> </td>
+        <td><po-button p-label="Analísta desenv II" p-small="true" (p-click)="openModal(1)"> Analísta desenv II</po-button> </td>
         <td><po-button p-label="Analísta Agile Master II (75%)" p-small="true" p-disabled="true"> Analísta Agile Master II (75%)</po-button></td>
         <td><po-button p-label="Analísta PO II" p-small="true" p-disabled="true"> Analísta PO II</po-button></td>
       </tr>
@@ -91,5 +94,6 @@
       </tr>
     </tbody>
   </table>
+
 
 </po-page-default>

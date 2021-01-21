@@ -1,7 +1,9 @@
+import { OfficeService } from './../office/office.service';
+import { OfficeModule } from './../office/office.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PoButtonModule, PoPageModule } from '@po-ui/ng-components';
+import { PoButtonModule, PoPageModule, PoModalModule } from '@po-ui/ng-components';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
@@ -12,7 +14,10 @@ import { HomeRoutingModule } from './home-routing.module';
     CommonModule,
     PoPageModule,
     HomeRoutingModule,
-    PoButtonModule
-  ]
+    PoButtonModule,
+    OfficeModule, 
+    PoModalModule
+  ],
+  providers:[OfficeService]
 })
 export class HomeModule { }

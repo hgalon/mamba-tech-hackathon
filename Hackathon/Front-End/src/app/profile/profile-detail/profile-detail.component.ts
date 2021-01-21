@@ -1,4 +1,4 @@
-import { CargoService } from './../../cargo/cargo.service';
+import { OfficeService } from '../../office/office.service';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -31,7 +31,7 @@ export class ProfileDetailComponent implements OnInit {
     private notification: PoNotificationService,
     private router: Router,
     private profileService: ProfileService,
-    private cargoService:CargoService) {
+    private cargoService:OfficeService) {
 
       const { id } = this.activatedRoute.snapshot.params;
 
