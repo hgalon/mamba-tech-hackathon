@@ -1,0 +1,208 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Api\\HackathonTotvs.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Api\\HackathonTotvs.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Api\\HackathonTotvs.Api.csproj",
+        "projectName": "HackathonTotvs.Api",
+        "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Api\\HackathonTotvs.Api.csproj",
+        "packagesPath": "C:\\Users\\Raniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Raniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
+                "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj"
+              },
+              "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {
+                "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
+        "projectName": "HackathonTotvs.Domain",
+        "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
+        "packagesPath": "C:\\Users\\Raniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Raniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
+        "projectName": "HackathonTotvs.Service",
+        "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
+        "packagesPath": "C:\\Users\\Raniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Raniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
+                "projectPath": "C:\\Users\\Raniel\\source\\repos\\HackathonTotvs\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.po-menu-collapse-button, .po-menu-item, .po-menu-item-no-data {
+    border-top: 1px solid #dadedf !important;
+    color: #0C9ABE !important;
+}
+
+.po-menu-footer .po-menu-collapse-button-icon {
+    color: #0C9ABE !important;
+    border-right: 1px solid;
+}
+
+
+.po-menu-body {
+    border-right: 1px solid #0C9ABE;
+}
+
+.po-field-icon {
+    color:  #0C9ABE;
+    cursor: pointer;
+}
+
+.po-switch-container-on {
+    background-color: #0C9ABE;
+}
+
+.po-switch-container:focus {
+    box-shadow: inset 0 0 0 1px  #0C9ABE !important;
+    outline: none;
+}
+
+.po-switch-button-on>.po-icon-ok {
+    color: #0C9ABE !important;
+}
+
+.po-select-button {
+    color: #0C9ABE !important;
+}
+
+.po-wrapper-menu-panel .po-toolbar, .po-wrapper .po-toolbar {
+    background-color: #0D729C;
+}
+
+.po-toolbar-title {
+    color:#FFF;
+}
+
+.po-avatar-default-icon {
+    color: #c1c1c1;
+}
+
+.po-toolbar-profile-item-header-subtitle, .po-toolbar-profile-item-header-title {
+    color: #0D729C;
+}
+
+.po-popup-item-default {
+    color: #0D729C;
+}
+
+.po-menu-item-selected, .po-menu-item-selected:hover {
+    border-left: 3px solid #0D729C!important;
+
+}
+
+
+button{
+    margin-right: 5px !important;
+}

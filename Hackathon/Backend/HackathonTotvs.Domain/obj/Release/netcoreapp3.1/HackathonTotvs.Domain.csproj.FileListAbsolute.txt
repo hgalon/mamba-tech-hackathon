@@ -1,0 +1,9 @@
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\bin\Release\netcoreapp3.1\HackathonTotvs.Domain.deps.json
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\bin\Release\netcoreapp3.1\HackathonTotvs.Domain.dll
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\bin\Release\netcoreapp3.1\HackathonTotvs.Domain.pdb
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.csprojAssemblyReference.cache
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.AssemblyInfoInputs.cache
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.AssemblyInfo.cs
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.dll
+C:\Users\Raniel\source\repos\HackathonTotvs\HackathonTotvs.Domain\obj\Release\netcoreapp3.1\HackathonTotvs.Domain.pdb

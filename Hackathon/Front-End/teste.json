@@ -1,0 +1,17 @@
+[
+    {
+        "trilha" : "Tech", 
+        "carreiras":
+        [{ "carreira" : "Dev e Frame", 
+        "areas": 
+            [{ "area" : "Dev Team", 
+                "cargos":
+                 [{ 
+                    "cargo": "Analista de Dev I", 
+                    "nomeNivel" : "Analista I",
+                    "idNivel" : 2 
+                 }] 
+            }]
+        }]
+    }
+]
