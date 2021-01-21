@@ -10,8 +10,10 @@ namespace HackathonTotvs.Domain.Models
     {
         [Column("id")]
         public int Id { get; set; }
+
         [Column("titulo")]
         public string Titulo { get; set; }
+
         [Column("descricao")]
         public string Descricao { get; set; }
     }

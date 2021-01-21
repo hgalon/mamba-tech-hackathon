@@ -9,14 +9,6 @@ namespace HackathonTotvs.Domain.Models
     {
         public Usuario() {}
 
-        public Usuario(int id, string nome, string sobrenome, int cargoId)
-        {
-            Id = id;
-            Nome = nome;
-            Sobrenome = sobrenome;
-            CargoId = cargoId;
-        }
-
         [Column("id")]
         public int Id { get; set; }
         [Column("nome")]

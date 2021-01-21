@@ -11,32 +11,33 @@ using System.Data.SqlClient;
 namespace HackathonTotvs.Service.Injections
 
 {
-    public static class DependencyInjection
+  public static class DependencyInjection
+  {
+    public static IServiceCollection Resolve(this IServiceCollection services, IConfiguration configuration)
     {
-        public static IServiceCollection Resolve(this IServiceCollection services, IConfiguration configuration)
-        {
 
 
-            services.AddTransient<IDbConnection>(db => new SqlConnection(
-                   configuration.GetConnectionString("TotvsDb")));
+      services.AddTransient<IDbConnection>(db => new SqlConnection(
+             configuration.GetConnectionString("TotvsDb")));
 
-            services.AddDbContext<TotvsContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("TotvsDb")));
+      services.AddDbContext<TotvsContext>(options =>
+          options.UseSqlServer(configuration.GetConnectionString("TotvsDb")));
 
-            services.AddScoped<ICargo, CargoRepository>();
-            services.AddScoped<ICursoHabilidade, CursoHabilidadeRepository>();
-            services.AddScoped<ICurso, CursoRepository>();
-            services.AddScoped<IHabilidade, HabilidadeRepository>();
-            services.AddScoped<ITipoHabilidade, TipoHabilidadeRepository>();
-            services.AddScoped<IUsuarioHabilidade, UsuarioHabilidadeRepository>();
-            services.AddScoped<IUsuario, UsuarioRepository>();
-            services.AddScoped<ITrilha, TrilhaRepository>();
-            services.AddScoped<IAuth, AuthRepository>();
-            //services.AddScoped<IRecoveryPassword, RecoveryPasswordRepository>();
-            //services.AddScoped<IEmailSender,AuthMessageSender>();
-            return services;
-
-        }
+      services.AddScoped<ICargo, CargoRepository>();
+      services.AddScoped<IHabilidade, HabilidadeRepository>();
+      services.AddScoped<ITipoHabilidade, TipoHabilidadeRepository>();
+      services.AddScoped<IUsuarioHabilidade, UsuarioHabilidadeRepository>();
+      services.AddScoped<ICargoHabilidade, CargoHabilidadeRepository>();
+      services.AddScoped<IUsuario, UsuarioRepository>();
+      services.AddScoped<ITrilha, TrilhaRepository>();
+      services.AddScoped<ICarreira, CarreiraRepository>();
+      services.AddScoped<IArea, AreaRepository>();
+      services.AddScoped<IAuth, AuthRepository>();
+      //services.AddScoped<IRecoveryPassword, RecoveryPasswordRepository>();
+      //services.AddScoped<IEmailSender,AuthMessageSender>();
+      return services;
 
     }
+
+  }
 }

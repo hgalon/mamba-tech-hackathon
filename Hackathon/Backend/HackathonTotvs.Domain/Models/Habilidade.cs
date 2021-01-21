@@ -18,16 +18,17 @@ namespace HackathonTotvs.Domain.Models
 
         [Column("id")]
         public int Id { get; set; }
+
         [Column("id_tipo_habilidade")]
         public int IdTipoHabilidade { get; set; }
+
         [Column("titulo")]
         public string Titulo { get; set; }
+
         [Column("descricao")]
         public string Descricao { get; set; }
 
         [ForeignKey("IdTipoHabilidade")]
         public virtual TipoHabilidade TipoHabilidade { get; set; }
-
-        public virtual List<CursoHabilidade> Cursos { get; set; }
     }
 }

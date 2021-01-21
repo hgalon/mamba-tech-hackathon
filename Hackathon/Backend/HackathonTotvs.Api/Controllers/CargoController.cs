@@ -63,7 +63,7 @@ namespace HackathonTotvs.Api.Controllers
 
                 if (_cargo.Id == 0)
                 {
-                    return NotFound(new Messages("Este cargo não existe ou já foi removido." ));
+                    return NotFound(new Messages("Este Cargo não existe ou já foi removido." ));
                 }
 
                 await cargoRepo.Update(cargo);
@@ -89,7 +89,7 @@ namespace HackathonTotvs.Api.Controllers
 
                 if (_cargo.Id == 0)
                 {
-                    return NotFound("Este cargo não existe ou já foi removido.");
+                    return NotFound("Este Cargo não existe ou já foi removido.");
                 }
 
                 await cargoRepo.Delete(id);
