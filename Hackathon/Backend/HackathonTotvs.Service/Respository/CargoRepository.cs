@@ -24,7 +24,7 @@ namespace HackathonTotvs.Service.Respository
             WHEN CA.nivel = 3 THEN 'Avançado'
             ELSE 'Não se aplica'
             END) nivel, ca.nivel cod_nivel, c.meses_experiencia, c.descricao,
-            H.id_tipo_habilidade
+            H.id_tipo_habilidade,CA.id_habilidade
             from tb_cargo C
             inner join tb_cargo_habilidade CA on CA.id_cargo = C.id
             inner join tb_habilidade H on H.id = CA.id_habilidade where C.id = @Id";

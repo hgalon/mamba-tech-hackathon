@@ -26,6 +26,8 @@ export class HomeComponent implements OnInit {
   ];
 
 
+  avatar = 'https://www.noobpreneur.com/wp-content/uploads/2016/07/women-entrepreneur.jpg'
+
   secondaryActionLabel: string;
   secondaryActionProperties: Array<string>;
   secondaryActionOptions: Array<PoCheckboxGroupOption> = [

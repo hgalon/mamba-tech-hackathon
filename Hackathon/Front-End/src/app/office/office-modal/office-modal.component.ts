@@ -42,6 +42,8 @@ export class OfficeModalComponent implements OnInit {
   };
 
 
+ 
+
   secondaryActionLabel: string;
   secondaryActionProperties: Array<string>;
   secondaryActionOptions: Array<PoCheckboxGroupOption> = [
@@ -106,7 +108,42 @@ export class OfficeModalComponent implements OnInit {
   }
 
 
-  minhasHabilidades : any[] = []
+  minhasHabilidades : any[] = [
+    {
+      cargo:1,habilidades:[{ cod_nivel:1, id_habilidade:9 },
+        { cod_nivel:1, id_habilidade:10 },
+        { cod_nivel:1, id_habilidade:12 },
+        { cod_nivel:1, id_habilidade:13 },
+        { cod_nivel:'Não se aplica', id_habilidade:14 },
+        { cod_nivel:'Não se aplica', id_habilidade:11 },]
+    }
+    
+  ]
+
+
+  filtaHabilidade(car:any,hab:any,nivel:any): Boolean {  
+
+    let x : Boolean = false
+
+    this.minhasHabilidades.filter((item,key)=>{
+      item.habilidades.filter((c,k)=>{
+
+        if(item.cargo === car)
+        {
+              
+          if(c.cod_nivel === nivel && c.id_habilidade === hab)
+          {
+              x = true
+          }
+        }
+
+      })
+      
+    })
+
+   return x;
+ }
+
 
 
 }

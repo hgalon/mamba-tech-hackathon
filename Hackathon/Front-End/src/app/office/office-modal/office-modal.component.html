@@ -31,13 +31,13 @@
                 <th>Habilidade</th>
                 <th>Nível</th>
                 <th>
-                  
                 </th>
+                <th></th>
               </tr>
             
             </thead>
             <tbody class="">
-              <tr *ngFor="let item of habilidades;let id_area = index">
+              <tr *ngFor="let item of habilidades;let indice = index">
                 <td [id]="item.habilidade">
                   {{item.habilidade}}  <strong *ngIf="item.desejavel == 1" style="font-style: italic;margin-left: 20px;">(Desejável)</strong>           
                 </td>
@@ -45,8 +45,12 @@
                     {{item.nivel}}
                 </td>
                 <td>
-                    <img src="assets/img/check.svg">
-                    <img style="width:24px !important" src="assets/img/cancel2.svg">
+                    <img src="assets/img/check.svg" *ngIf="(item.id_habilidade !== 10 && item.id_habilidade !== 13) ? true: false" alt="Você possui essa habilidade">
+                    <img style="width:24px !important" *ngIf="(item.id_habilidade === 10 || item.id_habilidade === 13) ? true : false" src="assets/img/cancel2.svg" alt="Você não possui essa habilidade">
+                </td>
+                <td>
+                    <a *ngIf="item.id_habilidade === 10" target="_blank" href="https://www.alura.com.br/curso-online-logica-programacao-javascript-html">+Trilha de curso</a>
+                    <a *ngIf="item.id_habilidade === 13" target="_blank" href="https://www.alura.com.br/curso-online-logica-programacao-javascript-html">+Trilha de curso</a>
                 </td>
               </tr>
             </tbody>
