@@ -71,3 +71,7 @@ button{
 .po-menu{
     background: #2C3739;
 } 
+
+.po-button-sm {
+    border-radius: 25px !important;
+  }

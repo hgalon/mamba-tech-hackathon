@@ -38,4 +38,8 @@ export class OfficeService {
   getAll(): Observable<Array<any>> {
     return this.httpCli.get(this.url) as Observable<Array<any>>;
   }
+
+  getAllCargo(): Observable<Array<any>> {
+    return this.httpCli.get('https://totvs-hackathon.azurewebsites.net/api/cargo') as Observable<Array<any>>;
+  }
 }

@@ -68,27 +68,86 @@
 
   <app-office-modal></app-office-modal>
   
-  <div *ngFor="let item of trilha">
 
-  <div *ngFor="let carreira of item.carreiras">  
+  
+  <div *ngFor="let item of trilhas;let id_trilha = index">
+
+  <div *ngFor="let carreira of item.carreiras;let id_carreira = index">  
 
     <h2> {{item.titulo}} / {{carreira.titulo}}</h2>
 
-      <table class="heavyTable">
+      <table class="po-table ng-star-inserted">
         <thead>
-          <tr>
- 
-            <th  *ngFor="let area of carreira.areas" [id]="area.id">{{area.titulo}}</th>
+          <tr class="po-table-header">
+            <th *ngFor="let area of carreira.areas" [id]="area.id">{{area.titulo}}</th>
           </tr>
         
         </thead>
-        <tbody>
-          <tr>
-            <td *ngFor="let _area of carreira.areas">
-              <span *ngFor="let cargo of _area.cargos"><po-button *ngIf="cargo.idNivel === 4 && cargo.idArea === _area.id"   [p-label]="cargo.titulo" p-small="true" (p-click)="openModal(1)"> {{cargo.titulo}}</po-button> </span>
+        <tbody class="po-table-group-row ng-star-inserted">
+          <tr *ngIf="filterFunction(carreira.areas,4).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,4)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
             </td>
           </tr>
-          <tr>
+          <tr *ngIf="filterFunction(carreira.areas,5).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,5)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"   [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,6).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,6)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"   [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,7).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,7)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"   [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,8).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,8)">
+                <po-button *ngIf="ii.idArea === _area.id"  [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,9).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,9)">
+                <po-button *ngIf="ii.idArea === _area.id"  [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,10).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,10)">
+                <po-button *ngIf="ii.idArea === _area.id"  [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,11).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,11)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"   [p-label]="ii.titulo" p-small="true" (p-click)="openModal(1)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

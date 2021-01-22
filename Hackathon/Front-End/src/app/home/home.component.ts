@@ -55,7 +55,8 @@ export class HomeComponent implements OnInit {
     this.officeModalComponent.openModal(id);
   }
 
-  public trilha :any[];
+  public trilhas :any[];
+  public listaCargo :any[];
 
   constructor(private officeService:OfficeService) { }
 
@@ -65,17 +66,18 @@ export class HomeComponent implements OnInit {
       this.officeService
       .getAll()
       .subscribe((trilha: Array<any>) => {
-        this.trilha = trilha;
+        this.trilhas = trilha;
 
-        console.log(this.trilha)
+        console.log(this.trilhas)
+
 
         // let x =  trilha.filter((value,key)=>{
         //    if(value.id === 8)
         //     {
-        //       value.carreiras.filter((carreira,ckey)=>{
-        //         if(carreira.id == 1)
+        //       value.areas.filter((area,ckey)=>{
+        //         if(area.id == 1)
         //         {
-        //           carreira.filter((area,akey)=>{
+        //           area.filter((area,akey)=>{
         //               area.cargos((cargo,cckey)=>{
         //                  if(cargo.idNivel === 4)
         //                   return cargo
@@ -92,9 +94,30 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // filterFunction(colletction,idArea, idNivel, idTrilha): any[] {  
-  //   return colletction.filter(i => i.idArea.value === idArea && i.idN);
-  // }
+  filterFunction(colletction,nivel): any[] {  
+
+    // console.log(colletction,nivel)
+
+    let x : any[] = [];
+
+    colletction.filter((area,key)=>{
+      area.cargos.filter((c,k)=>{
+
+
+      if(c.idNivel === nivel)
+      {
+        console.log()
+          x.push(c);
+      }
+
+      })
+      
+    })
+
+    console.log(x)
+
+   return x;
+ }
 
 
   restore() {
