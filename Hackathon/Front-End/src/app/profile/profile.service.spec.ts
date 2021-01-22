@@ -1,12 +1,21 @@
-import { TestBed } from '@angular/core/testing';
+import { HttpClientModule } from "@angular/common/http";
+import { TestBed, TestModuleMetadata } from '@angular/core/testing';
 
 import { ProfileService } from './profile.service';
 
 describe('ProfileService', () => {
   let service: ProfileService;
 
+  const moduleDef: TestModuleMetadata = {
+    imports: [
+      HttpClientModule,
+    ],
+    providers: [
+    ]
+  }
+
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule(moduleDef);
     service = TestBed.inject(ProfileService);
   });
 

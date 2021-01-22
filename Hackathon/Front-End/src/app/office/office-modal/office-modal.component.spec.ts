@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from "@angular/common/http";
+import { async, ComponentFixture, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { PoModule } from "@po-ui/ng-components";
 
 import { OfficeModalComponent } from './office-modal.component';
 
@@ -6,10 +8,18 @@ describe('OfficeModalComponent', () => {
   let component: OfficeModalComponent;
   let fixture: ComponentFixture<OfficeModalComponent>;
 
+  const moduleDef: TestModuleMetadata = {
+    imports: [
+      HttpClientModule,
+      PoModule,
+    ],
+    providers: [
+
+    ]
+  }
+
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ OfficeModalComponent ]
-    })
+    TestBed.configureTestingModule(moduleDef)
     .compileComponents();
   }));
 
