@@ -19,5 +19,10 @@ namespace HackathonTotvs.Domain.Models
 
         [Column("id_carreira")]
         public int IdCarreira { get; set; }
+
+        [ForeignKey("IdCarreira")]
+        public Carreira Carreira { get; set; }
+
+        public virtual List<Cargo> Cargos {get;set;}
     }
 }

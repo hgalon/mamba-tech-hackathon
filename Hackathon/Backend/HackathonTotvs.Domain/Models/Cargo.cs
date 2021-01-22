@@ -25,5 +25,8 @@ namespace HackathonTotvs.Domain.Models
 
     [Column("id_nivel")]
     public int? IdNivel { get; set; }
+
+    [ForeignKey("IdArea")]
+    public virtual Area Area { get; set; }
   }
 }

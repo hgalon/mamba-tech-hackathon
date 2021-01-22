@@ -19,5 +19,10 @@ namespace HackathonTotvs.Domain.Models
 
         [Column("id_trilha")]
         public int IdTrilha { get; set; }
+
+        [ForeignKey("IdTrilha")]
+        public virtual Trilha Trilha { get; set; }
+
+        public virtual List<Area> Areas { get; set; }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {}
+    "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
+    "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
         "projectName": "HackathonTotvs.Domain",
-        "projectPath": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
-        "packagesPath": "C:\\Users\\samuel.aurelio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj",
+        "packagesPath": "C:\\Users\\Raniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samuel.aurelio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Raniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {
+    "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
         "projectName": "HackathonTotvs.Service",
-        "projectPath": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
-        "packagesPath": "C:\\Users\\samuel.aurelio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Service\\obj\\",
+        "projectPath": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Service\\HackathonTotvs.Service.csproj",
+        "packagesPath": "C:\\Users\\Raniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samuel.aurelio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Raniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
-                "projectPath": "C:\\Users\\samuel.aurelio\\Documents\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj"
+              "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj": {
+                "projectPath": "C:\\Users\\Raniel\\mamba-tech-hackathon\\Hackathon\\Backend\\HackathonTotvs.Domain\\HackathonTotvs.Domain.csproj"
               }
             }
           }
@@ -98,6 +98,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.11, )"
@@ -130,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

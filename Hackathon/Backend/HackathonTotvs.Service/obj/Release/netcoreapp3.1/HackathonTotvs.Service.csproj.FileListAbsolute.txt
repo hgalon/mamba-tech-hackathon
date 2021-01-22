@@ -22,3 +22,15 @@ C:\Users\samuel.aurelio\Documents\Hackathon\Backend\HackathonTotvs.Service\obj\R
 C:\Users\samuel.aurelio\Documents\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.csproj.CopyComplete
 C:\Users\samuel.aurelio\Documents\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.dll
 C:\Users\samuel.aurelio\Documents\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.pdb
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\bin\Release\netcoreapp3.1\HackathonTotvs.Service.deps.json
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\bin\Release\netcoreapp3.1\HackathonTotvs.Service.dll
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\bin\Release\netcoreapp3.1\HackathonTotvs.Service.pdb
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\bin\Release\netcoreapp3.1\HackathonTotvs.Domain.dll
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\bin\Release\netcoreapp3.1\HackathonTotvs.Domain.pdb
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.csprojAssemblyReference.cache
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.AssemblyInfoInputs.cache
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.AssemblyInfo.cs
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.csproj.CoreCompileInputs.cache
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.csproj.CopyComplete
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.dll
+C:\Users\Raniel\mamba-tech-hackathon\Hackathon\Backend\HackathonTotvs.Service\obj\Release\netcoreapp3.1\HackathonTotvs.Service.pdb

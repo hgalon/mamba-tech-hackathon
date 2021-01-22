@@ -16,5 +16,8 @@ namespace HackathonTotvs.Domain.Models
 
         [Column("descricao")]
         public string Descricao { get; set; }
+
+        public virtual List<Carreira> Carreiras { get; set; }
+
     }
 }

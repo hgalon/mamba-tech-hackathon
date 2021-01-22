@@ -29,6 +29,24 @@ namespace HackathonTotvs.Api.Controllers
             return await cargoRepo.SelectAll();
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+
+            try
+            {
+                var habilidades = await cargoRepo.GetForId(id);
+                var detalhe = await cargoRepo.GetDetailForId(id);
+
+                return Ok(new { habilidades, detalhe });
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
