@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "da915622-ee05-4088-b41a-02670212f85e",
+		"name": "API Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cargo",
+			"item": [
+				{
+					"name": "Inserir cargo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"/*let date = Date.now();\r",
+									"let xp = Math.floor(Math.random() * 100);\r",
+									"pm.environment.set('mesesExperiencia', xp);*/"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validating json response keys \", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"titulo\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"descricao\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"mesesExperiencia\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"idArea\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"idNivel\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validating json response values \", function () {\r",
+									"    pm.expect(response.titulo).to.be.equal(\"POST TEST\");\r",
+									"    pm.expect(response.descricao).to.be.equal(\"POST TEST DESC\");\r",
+									"    pm.expect(response.mesesExperiencia).to.be.equal(12);\r",
+									"    pm.expect(response.idArea).to.be.equal(1);\r",
+									"    pm.expect(response.idNivel).to.be.equal(4);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"POST TEST\",\r\n    \"descricao\": \"POST TEST DESC\",\r\n    \"mesesExperiencia\": 12,\r\n    \"idArea\": 1,\r\n    \"idNivel\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://totvs-hackathon.azurewebsites.net/api/cargo",
+							"protocol": "https",
+							"host": [
+								"totvs-hackathon",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"cargo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cargos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"try { \r",
+									"    responseJSON = JSON.parse(responseBody); \r",
+									"    tests[\"response is valid JSON\"] = true;\r",
+									"}\r",
+									"catch (e) { \r",
+									"    responseJSON = {}; \r",
+									"    tests[\"response is valid JSON\"] = false;\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Validating json\", function () {\r",
+									"    for (var i in response) {\r",
+									"        pm.expect(response[i]).to.have.property(\"id\")\r",
+									"        pm.expect(response[i]).to.have.property(\"titulo\");\r",
+									"        pm.expect(response[i]).to.have.property(\"descricao\");\r",
+									"        pm.expect(response[i]).to.have.property(\"mesesExperiencia\");\r",
+									"        pm.expect(response[i]).to.have.property(\"idArea\");\r",
+									"        pm.expect(response[i]).to.have.property(\"idNivel\");\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validating course ID\", function () {\r",
+									"    for (var i in response) {\r",
+									"        pm.expect(response[i].id).to.not.be.below(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"let rolesIDs = [];\r",
+									"for (var i in response) {\r",
+									"    rolesIDs.push(response[i].id);\r",
+									"}\r",
+									"pm.environment.set('lastRoleID', rolesIDs.max());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://totvs-hackathon.azurewebsites.net/api/cargo",
+							"protocol": "https",
+							"host": [
+								"totvs-hackathon",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"cargo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar cargo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"{{lastRoleID}}\",\r\n    \"titulo\": \"PUT TEST\",\r\n    \"descricao\": \"PUT TEST DESC\",\r\n    \"mesesExperiencia\": 13,\r\n    \"idArea\": 2,\r\n    \"idNivel\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://totvs-hackathon.azurewebsites.net/api/cargo/{{lastRoleID}}",
+							"protocol": "https",
+							"host": [
+								"totvs-hackathon",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"cargo",
+								"{{lastRoleID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar cargo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://totvs-hackathon.azurewebsites.net/api/cargo/{{lastRoleID}}",
+							"protocol": "https",
+							"host": [
+								"totvs-hackathon",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"cargo",
+								"{{lastRoleID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo de Habilidade",
+			"item": [
+				{
+					"name": "Lista tipos de habilidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://totvs-hackathon.azurewebsites.net/api/tipohabilidade",
+							"protocol": "https",
+							"host": [
+								"totvs-hackathon",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"tipohabilidade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trilha",
+			"item": [
+				{
+					"name": "Lista trilha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
