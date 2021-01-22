@@ -1,67 +1,29 @@
 <po-page-default p-title="">
 
   <div class="po-row" style="margin-bottom: 40px ;">
-    <po-widget class="po-lg-6" p-title="Sobre">
+    <po-widget class="po-lg-12" p-title="">
       <ng-container>
         <div class="po-row">
-          <po-avatar class="po-md-3" p-size="lg" [p-src]=""> </po-avatar>
+          <po-avatar class="po-md-1" p-size="lg" [p-src]=""> </po-avatar>
   
-          <div class="po-md-8">
+          <div class="po-md-3">
             <span class="po-sm-12 po-font-subtitle">
               Maria da Silva
             </span>
   
-            <span class="po-sm-12 po-font-text"> <strong>Tempo de TOTVS :</strong> 2 Anos </span>
+            <span class="po-sm-12 po-font-text"> <strong> Tempo de TOTVS :</strong> 2 Anos </span>
   
             <span class="po-sm-12 po-font-text"> <strong> E-mail:</strong> maria.silva@totvs.com.br  </span>
           </div>
-        </div>
+          <div class="po-md-3 ">
+       
+            <span class="po-sm-12 po-font-text"> <strong> Formação :</strong> Analista de Sistemas </span>
   
-        <div class="po-row">
-          <!-- <po-dropdown
-            class="po-lg-8 po-offset-md-4 po-offset-lg-4 po-offset-xl-4"
-            p-label="Add as friend?"
-            [p-actions]="answers">
-          </po-dropdown> -->
-        </div>
-      </ng-container>
-  
-      <ng-template #noMoreRequest>
-        <div class="po-row">
-          <span class="po-lg-8 po-font-subtitle">Congratulations Totver, no more requests!</span>
-        </div>
-      </ng-template>
-    </po-widget>
-    <po-widget class="po-lg-6" p-title="Minhas Habilidades">
-      <ng-container>
-        <div class="po-row">
-          <po-avatar class="po-md-3" p-size="lg" [p-src]=""> </po-avatar>
-  
-          <div class="po-md-8">
-            <span class="po-sm-12 po-font-subtitle">
-              Maria da Silva
-            </span>
-  
-            <span class="po-sm-12 po-font-text"> Analista de Sistemas II </span>
-  
-            <span class="po-sm-12 po-font-text"> Resides in  </span>
+            <span class="po-sm-12 po-font-text"> <strong> Superior:</strong> Alberto Rodrigues </span>
           </div>
         </div>
-  
-        <div class="po-row">
-          <!-- <po-dropdown
-            class="po-lg-8 po-offset-md-4 po-offset-lg-4 po-offset-xl-4"
-            p-label="Add as friend?"
-            [p-actions]="answers">
-          </po-dropdown> -->
-        </div>
       </ng-container>
   
-      <ng-template #noMoreRequest>
-        <div class="po-row">
-          <span class="po-lg-8 po-font-subtitle">Congratulations Totver, no more requests!</span>
-        </div>
-      </ng-template>
     </po-widget>
   </div>
 
@@ -84,6 +46,30 @@
         
         </thead>
         <tbody class="po-table-group-row ng-star-inserted">
+          <tr *ngIf="filterFunction(carreira.areas,1).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,1)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(ii.id)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,2).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,2)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(ii.id)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filterFunction(carreira.areas,3).length > 0">
+            <td *ngFor="let _area of carreira.areas;let id_area = index">
+              
+              <span *ngFor="let ii of filterFunction(carreira.areas,3)">
+                <po-button *ngIf="ii.idArea === _area.id" [id]="ii.id"  [p-label]="ii.titulo" p-small="true" (p-click)="openModal(ii.id)"> {{ii.titulo}}</po-button> 
+              </span>
+            </td>
+          </tr>
           <tr *ngIf="filterFunction(carreira.areas,4).length > 0">
             <td *ngFor="let _area of carreira.areas;let id_area = index">
               

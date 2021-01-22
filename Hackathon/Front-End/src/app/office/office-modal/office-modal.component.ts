@@ -1,3 +1,5 @@
+import { OfficeService } from './../office.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PoCheckboxGroupOption, PoModalAction, PoModalComponent, PoRadioGroupOption } from '@po-ui/ng-components';
 
@@ -7,6 +9,7 @@ import { PoCheckboxGroupOption, PoModalAction, PoModalComponent, PoRadioGroupOpt
   styleUrls: ['./office-modal.component.css']
 })
 export class OfficeModalComponent implements OnInit {
+
 
   @ViewChild(PoModalComponent, { static: true }) poModal: PoModalComponent;
 
@@ -19,7 +22,7 @@ export class OfficeModalComponent implements OnInit {
     action: () => {
       this.poModal.close();
     },
-    label: 'Confirm'
+    label: 'Fechar'
   }
 
   primaryActionLabel: string;
@@ -34,7 +37,8 @@ export class OfficeModalComponent implements OnInit {
     action: () => {
       this.poModal.close();
     },
-    label: 'Cancel'
+    label: 'Fechar'
+
   };
 
 
@@ -62,10 +66,13 @@ export class OfficeModalComponent implements OnInit {
     { label: 'Automatic', value: 'auto' }
   ];
 
-  openModal(id:Number) {
+  public habilidades:any[] = []
+  public detalhe:any={}
 
-    this.title = id;
+  openModal(_detalhe:any, _habilidades:any[]) {
 
+    this.habilidades = _habilidades;
+    this.detalhe = _detalhe;
 
     this.primaryAction.disabled = this.primaryActionProperties.includes('disabled');
     this.primaryAction.label = this.primaryActionLabel;
@@ -81,7 +88,7 @@ export class OfficeModalComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private officeService:OfficeService) { }
 
   ngOnInit() {
     this.restore();
@@ -97,5 +104,6 @@ export class OfficeModalComponent implements OnInit {
     this.secondaryActionLabel = undefined;
     this.secondaryActionProperties = [];
   }
-  
+
+
 }

@@ -21,16 +21,10 @@ export class MainComponent {
 
   readonly menus: Array<PoMenuItem> = [
     {
-      label: 'Ínicio',
+      label: 'Carreira',
       link: 'home',
-      icon: 'po-icon-home',
-      shortLabel: 'Ínicio'
-    },
-    {
-      label: 'Meu Perfil',
-      link: 'profile',
       icon: 'po-icon-user',
-      shortLabel: 'Perfil'
+      shortLabel: 'Carreira'
     }
   ];
 

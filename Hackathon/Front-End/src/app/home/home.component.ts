@@ -50,9 +50,17 @@ export class HomeComponent implements OnInit {
     { label: 'Automatic', value: 'auto' }
   ];
 
+  
+
   openModal(id:Number) {
 
-    this.officeModalComponent.openModal(id);
+    this.officeService
+    .getCargoForId(id)
+    .subscribe((retorno: any) => {
+      console.log(retorno)
+      this.officeModalComponent.openModal(retorno.detalhe,retorno.habilidades);
+    })
+
   }
 
   public trilhas :any[];
@@ -68,35 +76,10 @@ export class HomeComponent implements OnInit {
       .subscribe((trilha: Array<any>) => {
         this.trilhas = trilha;
 
-        console.log(this.trilhas)
-
-
-        // let x =  trilha.filter((value,key)=>{
-        //    if(value.id === 8)
-        //     {
-        //       value.areas.filter((area,ckey)=>{
-        //         if(area.id == 1)
-        //         {
-        //           area.filter((area,akey)=>{
-        //               area.cargos((cargo,cckey)=>{
-        //                  if(cargo.idNivel === 4)
-        //                   return cargo
-        //               })
-
-        //           })
-        //         }
-
-        //       })
-        //     }
-        // })
-
-        // console.log(x)
     });
   }
 
   filterFunction(colletction,nivel): any[] {  
-
-    // console.log(colletction,nivel)
 
     let x : any[] = [];
 
@@ -106,16 +89,12 @@ export class HomeComponent implements OnInit {
 
       if(c.idNivel === nivel)
       {
-        console.log()
           x.push(c);
       }
 
       })
       
     })
-
-    console.log(x)
-
    return x;
  }
 

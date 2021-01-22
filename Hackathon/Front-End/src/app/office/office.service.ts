@@ -42,4 +42,8 @@ export class OfficeService {
   getAllCargo(): Observable<Array<any>> {
     return this.httpCli.get('https://totvs-hackathon.azurewebsites.net/api/cargo') as Observable<Array<any>>;
   }
+
+  getCargoForId(id:Number): Observable<any> {
+    return this.httpCli.get('https://totvs-hackathon.azurewebsites.net/api/cargo/'+id) as Observable<any>;
+  }
 }

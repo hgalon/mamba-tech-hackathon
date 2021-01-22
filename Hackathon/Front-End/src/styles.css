@@ -75,3 +75,16 @@ button{
 .po-button-sm {
     border-radius: 25px !important;
   }
+
+  .po-modal-header-close-button {
+
+    color: #0D729C;
+   
+}
+
+.po-button-primary {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.15);
+    background-color: #0c9abe;
+    border: 1px solid #0c9abe;
+    color: #ffffff;
+}
