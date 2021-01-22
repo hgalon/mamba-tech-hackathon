@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OfficeModalComponent } from './office-modal/office-modal.component';
-import { PoButtonModule, PoChartModule, PoInfoModule, PoModalModule, PoPageModule, PoTableModule, PoTagModule } from '@po-ui/ng-components';
+import { PoButtonModule, PoInfoModule, PoModalModule, PoPageModule, PoTableModule, PoTagModule } from '@po-ui/ng-components';
 import { OfficeSlideComponent } from './office-slide/office-slide.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 

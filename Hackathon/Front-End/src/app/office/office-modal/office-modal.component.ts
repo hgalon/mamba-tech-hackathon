@@ -106,4 +106,7 @@ export class OfficeModalComponent implements OnInit {
   }
 
 
+  minhasHabilidades : any[] = []
+
+
 }

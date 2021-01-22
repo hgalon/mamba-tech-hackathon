@@ -8,12 +8,12 @@
     [p-primary-action]="primaryAction"
     [p-secondary-action]="secondaryActionLabel ? secondaryAction : null"
     [p-size]="size"
-    [p-title]="detalhe[0]?.titulo">
+    [p-title]="detalhe[0]?.titulo" [id]="detalhe[0]?.titulo">
 
         <div class="po-row">
-          <po-info class="po-md-4" p-label="Graduação" [p-value]="detalhe[0]?.formacao === null ? 'Não se aplica' : detalhe[0]?.formacao"> </po-info>
+          <po-info class="po-md-4" p-label="Graduação" [id]="detalhe[0]?.formacao" [p-value]="detalhe[0]?.formacao === null ? 'Não se aplica' : detalhe[0]?.formacao"> </po-info>
       
-          <po-info class="po-md-4" p-label="Idioma" [p-value]="detalhe[0]?.idioma === null ? 'Não se aplica' : detalhe[0]?.idioma"> {{ detalhe[0]?.idioma === undefined ? 'Não se aplica' : detalhe[0]?.idioma }}</po-info>
+          <po-info class="po-md-4" p-label="Idioma" [id]="detalhe[0]?.idioma"  [p-value]="detalhe[0]?.idioma === null ? 'Não se aplica' : detalhe[0]?.idioma"> {{ detalhe[0]?.idioma === undefined ? 'Não se aplica' : detalhe[0]?.idioma }}</po-info>
       
           <po-info *ngIf="detalhe[0]?.meses_experiencia < 12"  class="po-md-4" p-label="Experiência" [p-value]="detalhe[0]?.meses_experiencia === null ? 'Não se aplica' : detalhe[0]?.meses_experiencia + ' Meses'"> </po-info>
           <po-info *ngIf="detalhe[0]?.meses_experiencia >= 12"  class="po-md-4" p-label="Experiência" [p-value]="detalhe[0]?.meses_experiencia === null ? 'Não se aplica' : detalhe[0]?.meses_experiencia/12 + ' Anos'"> </po-info>
@@ -30,16 +30,23 @@
               <tr class="">
                 <th>Habilidade</th>
                 <th>Nível</th>
+                <th>
+                  
+                </th>
               </tr>
             
             </thead>
             <tbody class="">
               <tr *ngFor="let item of habilidades;let id_area = index">
-                <td>
+                <td [id]="item.habilidade">
                   {{item.habilidade}}  <strong *ngIf="item.desejavel == 1" style="font-style: italic;margin-left: 20px;">(Desejável)</strong>           
                 </td>
                 <td>
                     {{item.nivel}}
+                </td>
+                <td>
+                    <img src="assets/img/check.svg">
+                    <img style="width:24px !important" src="assets/img/cancel2.svg">
                 </td>
               </tr>
             </tbody>
