@@ -3,7 +3,7 @@ import { OfficeModule } from './../office/office.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PoButtonModule, PoPageModule, PoModalModule, PoTagModule } from '@po-ui/ng-components';
+import { PoButtonModule, PoPageModule, PoModalModule, PoTagModule, PoWidgetModule, PoAvatarModule } from '@po-ui/ng-components';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
@@ -17,7 +17,9 @@ import { HomeRoutingModule } from './home-routing.module';
     PoButtonModule,
     OfficeModule, 
     PoModalModule,
-    PoTagModule
+    PoTagModule,
+    PoWidgetModule,
+    PoAvatarModule
   ],
   providers:[OfficeService]
 })

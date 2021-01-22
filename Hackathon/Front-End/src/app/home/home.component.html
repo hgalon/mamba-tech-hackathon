@@ -1,5 +1,69 @@
-<po-page-default p-title="Ínicio">
+<po-page-default p-title="">
 
+  <div class="po-row" style="margin-bottom: 40px ;">
+    <po-widget class="po-lg-6" p-title="Sobre">
+      <ng-container>
+        <div class="po-row">
+          <po-avatar class="po-md-3" p-size="lg" [p-src]=""> </po-avatar>
+  
+          <div class="po-md-8">
+            <span class="po-sm-12 po-font-subtitle">
+              Maria da Silva
+            </span>
+  
+            <span class="po-sm-12 po-font-text"> <strong>Tempo de TOTVS :</strong> 2 Anos </span>
+  
+            <span class="po-sm-12 po-font-text"> <strong> E-mail:</strong> maria.silva@totvs.com.br  </span>
+          </div>
+        </div>
+  
+        <div class="po-row">
+          <!-- <po-dropdown
+            class="po-lg-8 po-offset-md-4 po-offset-lg-4 po-offset-xl-4"
+            p-label="Add as friend?"
+            [p-actions]="answers">
+          </po-dropdown> -->
+        </div>
+      </ng-container>
+  
+      <ng-template #noMoreRequest>
+        <div class="po-row">
+          <span class="po-lg-8 po-font-subtitle">Congratulations Totver, no more requests!</span>
+        </div>
+      </ng-template>
+    </po-widget>
+    <po-widget class="po-lg-6" p-title="Minhas Habilidades">
+      <ng-container>
+        <div class="po-row">
+          <po-avatar class="po-md-3" p-size="lg" [p-src]=""> </po-avatar>
+  
+          <div class="po-md-8">
+            <span class="po-sm-12 po-font-subtitle">
+              Maria da Silva
+            </span>
+  
+            <span class="po-sm-12 po-font-text"> Analista de Sistemas II </span>
+  
+            <span class="po-sm-12 po-font-text"> Resides in  </span>
+          </div>
+        </div>
+  
+        <div class="po-row">
+          <!-- <po-dropdown
+            class="po-lg-8 po-offset-md-4 po-offset-lg-4 po-offset-xl-4"
+            p-label="Add as friend?"
+            [p-actions]="answers">
+          </po-dropdown> -->
+        </div>
+      </ng-container>
+  
+      <ng-template #noMoreRequest>
+        <div class="po-row">
+          <span class="po-lg-8 po-font-subtitle">Congratulations Totver, no more requests!</span>
+        </div>
+      </ng-template>
+    </po-widget>
+  </div>
 
 
   <app-office-modal></app-office-modal>
@@ -13,43 +77,18 @@
       <table class="heavyTable">
         <thead>
           <tr>
-            <th style="width: 5% !important;">Nível</th>
  
-            <th *ngFor="let area of carreira.areas">{{area.titulo}}</th>
+            <th  *ngFor="let area of carreira.areas" [id]="area.id">{{area.titulo}}</th>
           </tr>
         
         </thead>
         <tbody>
           <tr>
-            <td>Analísta II</td>
-            <td><po-button p-label="Analísta desenv II" p-small="true" (p-click)="openModal(1)"> Analísta desenv II</po-button> </td>
-            <td><po-button p-label="Analísta Agile Master II (75%)" p-small="true" p-disabled="true"> Analísta Agile Master II (75%)</po-button></td>
-            <td><po-button p-label="Analísta PO II" p-small="true" p-disabled="true"> Analísta PO II</po-button></td>
+            <td *ngFor="let _area of carreira.areas">
+              <span *ngFor="let cargo of _area.cargos"><po-button *ngIf="cargo.idNivel === 4 && cargo.idArea === _area.id"   [p-label]="cargo.titulo" p-small="true" (p-click)="openModal(1)"> {{cargo.titulo}}</po-button> </span>
+            </td>
           </tr>
           <tr>
-            <td>Analísta I</td>
-            <td><po-button p-label="Analísta Front I" p-small="true"> Analísta Front I</po-button> <po-button p-label="Analísta Back I" p-small="true"> Analísta Back I</po-button></td>
-            <td><po-button p-label="Analísta Agile Master I" p-disabled="true" p-small="true"> Analísta Agile Master I</po-button></td>
-            <td><po-button p-label="Analísta PO I" p-disabled="true" p-small="true"> Analísta PO I</po-button></td>
-          </tr>
-          <tr>
-            <td>Asistente / Técnico</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Estagiário</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Jovem aprendiz</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
     </div>

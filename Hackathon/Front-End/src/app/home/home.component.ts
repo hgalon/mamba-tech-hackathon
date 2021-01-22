@@ -68,8 +68,34 @@ export class HomeComponent implements OnInit {
         this.trilha = trilha;
 
         console.log(this.trilha)
+
+        // let x =  trilha.filter((value,key)=>{
+        //    if(value.id === 8)
+        //     {
+        //       value.carreiras.filter((carreira,ckey)=>{
+        //         if(carreira.id == 1)
+        //         {
+        //           carreira.filter((area,akey)=>{
+        //               area.cargos((cargo,cckey)=>{
+        //                  if(cargo.idNivel === 4)
+        //                   return cargo
+        //               })
+
+        //           })
+        //         }
+
+        //       })
+        //     }
+        // })
+
+        // console.log(x)
     });
   }
+
+  // filterFunction(colletction,idArea, idNivel, idTrilha): any[] {  
+  //   return colletction.filter(i => i.idArea.value === idArea && i.idN);
+  // }
+
 
   restore() {
     this.size = undefined;
